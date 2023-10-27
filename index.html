@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travlr</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 10px 0 10px">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"
+        style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 500;">Travelr</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Packages
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Popular Packages</a></li>
+              <li><a class="dropdown-item" href="#">Budget Friendly Packages</a></li>
+              <li><a class="dropdown-item" href="#">Most Liked Packages</a></li>
+              <li><a class="dropdown-item" href="#">Solo Traveller Packages</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </nav>
+  <!--Navbar-->
+  <!--Alert-->
+  <div class="alert alert-dark alert-dismissible fade show" style="margin-bottom: -1px; text-align: center;">
+    <strong>50% Off</strong> Spring and Summer package deals. More offers for first 200 Customers.
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  </div>
+  <!--Alert-->
+  <!--Carousel-->
+  <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="assets/img-2.jpeg" style="height: 600px;" class="d-block w-100" alt="Florida">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 align="left">Colorado </h1>
+          <p align="left">Where It is Legal to Get a Rocky Mountain High </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img-1.webp" style="height: 600px;" class="d-block w-100" alt="Hawaii">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 align="left">Las Vegas</h1>
+          <p align="left"> The city that Never Sleeps</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img-3.webp" style="height: 600px;" class="d-block w-100" alt="California">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 align="left">Washington DC</h1>
+          <p align="left"> The City of National Monuments</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img-4.jpeg" style="height: 600px;" class="d-block w-100" alt="New York">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 align="left">Utah</h1>
+          <p align="left">Land of Stunning Natural landscapes</p>
+
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!--Carousel-->
+  <!--Jumbotron-->
+  <div class="jumbotron" style="text-align:center; padding-top: 25px;"><br>
+    <h1 class="display-4">Exceptional customer service </h1><br>
+    <p class="lead">Our top-notch customer service and round-the-clock helpline are available to simplify the process of
+      booking your travel. <br>You can take advantage of our extensive selection of packages and book them at the
+      <br>lowest prices possible through our website or mobile app.
+    </p>
+
+
+    <p class="lead">
+
+      
+      <img src="assets/midpic-1.jpeg" class="img-fluid" alt="...">
+
+      <br><br>
+      <br.<br>
+    </p>
+  </div>
+  <!--Jumbotron-->
+  <!--Cards-->
+  <br><br>
+  <h1 class="display-4" style="text-align: center;">Our Packages</h1>
+  <div class="row row-cols-1 row-cols-md-4" style="padding: 50px 50px 0 50px;">
+
+    <div class="col mb-4">
+      <div class="card">
+        <img src="assets/card-1.jpeg" class="card-img-top" style="height: 200px;" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Popular <span class="badge bg-secondary">All new</span></h5>
+
+          <p class="card-text">With its bustling cities, charming towns, breathtaking national parks, vibrant beaches,
+            and stunning islands, the United States is an exceptional country filled with amazing people and sights - an
+            undeniable reality.</p><br><br><br>
+          <button type="button" class="btn btn-primary">Explore</button>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card">
+        <img src="assets/card_2.jpeg" class="card-img-top" style="height: 200px;" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Budget Friendly</h5>
+          <p class="card-text"> The United States remains a coveted dream destination for numerous travelers, and
+            fortunately, there are still several budget-friendly cities to explore. By crunching the numbers, we have
+            identified the most economical places to visit in the USA for those who want to keep their expenses low.</p>
+          <br>
+          <button type="button" class="btn btn-primary">Explore</button>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card">
+        <img src="assets/card-3.jpeg" class="card-img-top" style="height: 200px;" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Most-liked </h5>
+          <p class="card-text">Although there are several well-known destinations to visit in the United States, there
+            are many equally stunning and remarkable places that are often overlooked. Discover these hidden gems now
+            and expand your travel horizons.</p><br><br>
+          <button type="button" class="btn btn-primary">Explore</button>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card">
+        <img src="assets/card-2.avif" class="card-img-top" style="height: 200px;" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Solo Traveller</h5>
+          <p class="card-text">Solo travel is all about having the liberty and self-sufficiency to explore the world on
+            your own terms. It means having the freedom to choose your destinations and schedule, and the independence
+            to discover new places and make connections without relying on a travel partner.</p><br>
+          <button type="button" class="btn btn-primary">Explore</button>
+        </div>
+      </div>
+    </div>
+  </div><br><br><br><br>
