@@ -49,3 +49,5 @@ Footer: A footer is an additional navigation component. It can hold links, butto
 Lists: list component simplifies the creation and customization of organized lists, such as menus and navigation items. It supports both unordered and ordered lists and offers diverse styling options to enhance the visual appeal of the content. With its flexibility and responsive design, Bootstrap's list component is an essential tool for developing streamlined and visually appealing user interfaces.
 
 Table: Table component facilitates the creation of structured data tables, enabling the display of information in a clear and organized format. It offers various features for customization, such as responsive design and styling options, making it an efficient tool for presenting tabular data in web applications.
+
+Progress: Bootstrap Progress Bar component visually represents task progress, offering customization options like colors, styles, and animations, enhancing user experience and communication.
