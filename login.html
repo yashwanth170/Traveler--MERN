@@ -160,7 +160,8 @@
                                              </div>
                                           </div>
                                           <!-- Submit button -->
-                                          <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+                                          <button type="submit" class="btn btn-primary btn-block mb-4"
+                                             id="signInButton">Sign in</button>
                                        </form>
                                     </div>
                                     <div class="tab-pane fade active show" id="pills-register" role="tabpanel"
@@ -406,7 +407,14 @@
          const registerPassword = document.getElementById("registerPassword");
          const passvalidation = document.getElementById("pass-validation");
          const registerRepeatPassword = document.getElementById("registerRepeatPassword");
-         const regreppassvalidtion = document.getElementById("repass-validation")
+         const regreppassvalidtion = document.getElementById("repass-validation");
+
+         const emailRegex = /([\w\.]+)@travlr.com\b/;
+         const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/;
+         const regExName = /^[a-zA-Z]+$/;
+
+
+
 
 
 
@@ -415,6 +423,11 @@
             if (loginName.value.trim() === "") {
                nameValidation.textContent = "Please enter your email.";
                return false;
+
+            } else if (!emailRegex.test(loginName.value)) {
+               nameValidation.textContent = "Invalid email format.";
+               return false;
+
             } else {
                nameValidation.textContent = ""; // Clear any previous error messages
                return true;
@@ -425,7 +438,12 @@
             if (loginPassword.value.trim() === "") {
                passwordValidation.textContent = "Please enter your password.";
                return false;
-            } else {
+            } else if (!passwordRegex.test(loginPassword.value)) {
+               passwordValidation.textContent = "Password must contain at least 8 characters with at least one letter and one number.";
+               return false;
+            }
+
+            else {
                passwordValidation.textContent = "";
                return true;
             }
@@ -436,7 +454,13 @@
                regvalidation.textContent = "Please enter Name.";
                return false;
 
-            } else {
+            } else if (!regExName.test(registerName.value)) {
+               regvalidation.textContent = "Invalid Name format.";
+               return false;
+
+            }
+
+            else {
                regvalidation.textContent = "";
                return true;
             }
@@ -448,7 +472,12 @@
                uregvalidation.textContent = "Please enter UserName.";
                return false;
 
-            } else {
+            } else if (!regExName.test(registerUsername.value)) {
+               uregvalidation.textContent = "Invalid Name format.";
+               return false;
+            }
+
+            else {
                uregvalidation.textContent = "";
                return true;
             }
@@ -460,7 +489,13 @@
                emailvalidation.textContent = "Please enter Email.";
                return false;
 
-            } else {
+            } else if (!emailRegex.test(registerEmail.value)) {
+               emailvalidation.textContent = "Invalid email format.";
+               return false;
+
+            }
+
+            else {
                emailvalidation.textContent = "";
                return true;
             }
@@ -472,7 +507,12 @@
                passvalidation.textContent = "enter password.";
                return false;
 
-            } else {
+            }
+            else if (!passwordRegex.test(registerPassword.value)) {
+               passvalidation.textContent = "Password must contain at least 8 characters with at least one letter and one number.";
+               return false;
+            }
+            else {
                passvalidation.textContent = "";
                return true;
             }
@@ -484,7 +524,11 @@
                regreppassvalidtion.textContent = "Please confirm the password.";
                return false;
 
-            } else {
+            } else if (registerRepeatPassword.value !== registerPassword.value) {
+               regreppassvalidtion.textContent = "Passwords do not match.";
+               return false;
+            }
+            else {
                regreppassvalidtion.textContent = "";
                return true;
             }
@@ -495,13 +539,15 @@
          return false;
       }
 
-      document.getElementById("myForm").addEventListener("submit", function (event) {
-         if (!validate('name_field') || !validate('password_field') || !validate('sname_field') || !validate('usname_field') || !validate('email_field') || !validate('pass_field') || !validate('repeat_password_field')) {
-            event.preventDefault(); // Prevent form submission
+      document.getElementById("signInButton").addEventListener("click", function (event) {
+         const loginName = document.getElementById("loginName").value;
+         const loginPassword = document.getElementById("loginPassword").value;
+
+         // Check if the username and password are "admin"
+         if (loginName === "admin@travlr.com" && loginPassword === "admin123") {
+            // Redirect to another page (replace 'another-page.html' with the desired URL)
+            window.location.href = "index.html";
          }
-
-
-
       });
 
 
@@ -511,12 +557,5 @@
 
 
 
+
    </script>
-
-
-
-
-
-</body>
-
-</html>
