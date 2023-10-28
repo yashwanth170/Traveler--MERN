@@ -98,7 +98,7 @@
                                  <div class="tab-content">
                                     <div class="tab-pane fade" id="pills-login" role="tabpanel"
                                        aria-labelledby="tab-login">
-                                       <form>
+                                       <form id="myForm" onsubmit=" validate(); return false">
                                           <div class="text-center mb-3">
                                              <p>Sign in with:</p>
                                              <button type="button" class="btn btn-link btn-floating mx-1">
@@ -117,21 +117,27 @@
                                           <p class="text-center">or:</p>
                                           <!-- Email input -->
                                           <div class="form-outline mb-4">
-                                             <input type="email" id="loginName" class="form-control">
-                                             <label class="form-label" for="loginName" style="margin-left: 0px;">Email
-                                                or username</label>
+                                             <input type="email" id="loginName" class="form-control" placeholder="Email"
+                                                name="u_name" onblur="validate('name_field')">
+                                             <label class="form-label" for="loginName"
+                                                style="margin-left: 0px;">Email</label>
+                                             <small class="text-danger" id="name-validation"></small>
                                              <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px;"></div>
                                                 <div class="form-notch-middle" style="width: 115.2px;"></div>
                                                 <div class="form-notch-trailing"></div>
                                              </div>
+
                                           </div>
                                           <!-- Password input -->
                                           <div class="form-outline mb-4">
-                                             <input type="password" id="loginPassword" class="form-control">
+                                             <input type="password" id="loginPassword" class="form-control"
+                                                placeholder="*********" name="u_password"
+                                                onblur="validate('password_field')">
                                              <label class="form-label" for="loginPassword"
                                                 style="margin-left: 0px;">Password</label>
                                              <div class="form-notch">
+                                                <small class="text-danger" id="password-validation"></small>
                                                 <div class="form-notch-leading" style="width: 9px;"></div>
                                                 <div class="form-notch-middle" style="width: 64px;"></div>
                                                 <div class="form-notch-trailing"></div>
@@ -159,7 +165,7 @@
                                     </div>
                                     <div class="tab-pane fade active show" id="pills-register" role="tabpanel"
                                        aria-labelledby="tab-register">
-                                       <form>
+                                       <form id="myForm" onsubmit=" validate(); return false">
                                           <div class="text-center mb-3">
                                              <p>Sign up with:</p>
                                              <button type="button" class="btn btn-link btn-floating mx-1">
@@ -178,9 +184,11 @@
                                           <p class="text-center">or:</p>
                                           <!-- Name input -->
                                           <div class="form-outline mb-4">
-                                             <input type="text" id="registerName" class="form-control">
+                                             <input type="text" id="registerName" class="form-control" name="s_name"
+                                                onblur="validate('sname_field')">
                                              <label class="form-label" for="registerName"
                                                 style="margin-left: 0px;">Name</label>
+                                             <small class="text-danger" id="sname-validation"></small>
                                              <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px;"></div>
                                                 <div class="form-notch-middle" style="width: 42.4px;"></div>
@@ -189,9 +197,11 @@
                                           </div>
                                           <!-- Username input -->
                                           <div class="form-outline mb-4">
-                                             <input type="text" id="registerUsername" class="form-control">
+                                             <input type="text" id="registerUsername" class="form-control"
+                                                name="us_name" onblur="validate('usname_field')">
                                              <label class="form-label" for="registerUsername"
                                                 style="margin-left: 0px;">Username</label>
+                                             <small class="text-danger" id="usname-validation"></small>
                                              <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px;"></div>
                                                 <div class="form-notch-middle" style="width: 66.4px;"></div>
@@ -200,9 +210,11 @@
                                           </div>
                                           <!-- Email input -->
                                           <div class="form-outline mb-4">
-                                             <input type="email" id="registerEmail" class="form-control">
+                                             <input type="email" id="registerEmail" class="form-control" name="e_name"
+                                                onblur="validate('email_field')">
                                              <label class="form-label" for="registerEmail"
                                                 style="margin-left: 0px;">Email</label>
+                                             <small class="text-danger" id="email-validation"></small>
                                              <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px;"></div>
                                                 <div class="form-notch-middle" style="width: 40px;"></div>
@@ -211,9 +223,11 @@
                                           </div>
                                           <!-- Password input -->
                                           <div class="form-outline mb-4">
-                                             <input type="password" id="registerPassword" class="form-control">
+                                             <input type="password" id="registerPassword" class="form-control"
+                                                name="ps_name" onblur="validate('pass_field')">
                                              <label class="form-label" for="registerPassword"
                                                 style="margin-left: 0px;">Password</label>
+                                             <small class="text-danger" id="pass-validation"></small>
                                              <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px;"></div>
                                                 <div class="form-notch-middle" style="width: 64.8px;"></div>
@@ -222,9 +236,11 @@
                                           </div>
                                           <!-- Repeat Password input -->
                                           <div class="form-outline mb-4">
-                                             <input type="password" id="registerRepeatPassword" class="form-control">
+                                             <input type="password" id="registerRepeatPassword" class="form-control"
+                                                name="rp_name" onblur="validate('repeat_password_field')">
                                              <label class="form-label" for="registerRepeatPassword"
                                                 style="margin-left: 0px;">Repeat password</label>
+                                             <small class="text-danger" id="repass-validation"></small>
                                              <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px;"></div>
                                                 <div class="form-notch-middle" style="width: 106.4px;"></div>
@@ -374,6 +390,133 @@
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   <script>
+      function validate(fieldName) {
+         const loginName = document.getElementById("loginName");
+         const loginPassword = document.getElementById("loginPassword");
+         const nameValidation = document.getElementById("name-validation");
+         const passwordValidation = document.getElementById("password-validation");
+         const registerName = document.getElementById("registerName");
+         const regvalidation = document.getElementById("sname-validation");
+         const registerUsername = document.getElementById("registerUsername");
+         const uregvalidation = document.getElementById("usname-validation");
+         const registerEmail = document.getElementById("registerEmail");
+         const emailvalidation = document.getElementById("email-validation");
+         const registerPassword = document.getElementById("registerPassword");
+         const passvalidation = document.getElementById("pass-validation");
+         const registerRepeatPassword = document.getElementById("registerRepeatPassword");
+         const regreppassvalidtion = document.getElementById("repass-validation")
+
+
+
+
+         if (fieldName === 'name_field') {
+            if (loginName.value.trim() === "") {
+               nameValidation.textContent = "Please enter your email.";
+               return false;
+            } else {
+               nameValidation.textContent = ""; // Clear any previous error messages
+               return true;
+            }
+         }
+
+         if (fieldName === 'password_field') {
+            if (loginPassword.value.trim() === "") {
+               passwordValidation.textContent = "Please enter your password.";
+               return false;
+            } else {
+               passwordValidation.textContent = "";
+               return true;
+            }
+         }
+
+         if (fieldName == 'sname_field') {
+            if (registerName.value.trim() == "") {
+               regvalidation.textContent = "Please enter Name.";
+               return false;
+
+            } else {
+               regvalidation.textContent = "";
+               return true;
+            }
+
+         }
+
+         if (fieldName == 'usname_field') {
+            if (registerUsername.value.trim() == "") {
+               uregvalidation.textContent = "Please enter UserName.";
+               return false;
+
+            } else {
+               uregvalidation.textContent = "";
+               return true;
+            }
+
+         }
+
+         if (fieldName == 'email_field') {
+            if (registerEmail.value.trim() == "") {
+               emailvalidation.textContent = "Please enter Email.";
+               return false;
+
+            } else {
+               emailvalidation.textContent = "";
+               return true;
+            }
+
+         }
+
+         if (fieldName == 'pass_field') {
+            if (registerPassword.value.trim() == "") {
+               passvalidation.textContent = "enter password.";
+               return false;
+
+            } else {
+               passvalidation.textContent = "";
+               return true;
+            }
+
+         }
+
+         if (fieldName == 'repeat_password_field') {
+            if (registerRepeatPassword.value.trim() == "") {
+               regreppassvalidtion.textContent = "Please confirm the password.";
+               return false;
+
+            } else {
+               regreppassvalidtion.textContent = "";
+               return true;
+            }
+
+         }
+
+
+         return false;
+      }
+
+      document.getElementById("myForm").addEventListener("submit", function (event) {
+         if (!validate('name_field') || !validate('password_field') || !validate('sname_field') || !validate('usname_field') || !validate('email_field') || !validate('pass_field') || !validate('repeat_password_field')) {
+            event.preventDefault(); // Prevent form submission
+         }
+
+
+
+      });
+
+
+
+
+
+
+
+
+   </script>
+
+
+
+
+
 </body>
 
 </html>
