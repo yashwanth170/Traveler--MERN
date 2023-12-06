@@ -8,23 +8,23 @@ import { categoryState, categoryReducer } from "./CategoryContext";
 export const CategoryContext = createContext();
 
 const CategoryComponent = () => {
-    return (
-        <div className="grid grid-cols-1 space-y-4 p-4">
-            <CategoryMenu />
-            <AllCategories />
-        </div>
-    );
+  return (
+    <div className="grid grid-cols-1 space-y-4 p-4">
+      <CategoryMenu />
+      <AllCategories />
+    </div>
+  );
 };
 
 const Categories = (props) => {
-    const [data, dispatch] = useReducer(categoryReducer, categoryState);
-    return (
-        <Fragment>
-            <CategoryContext.Provider value={{ data, dispatch }}>
-                <AdminLayout children={<CategoryComponent />} />
-            </CategoryContext.Provider>
-        </Fragment>
-    );
+  const [data, dispatch] = useReducer(categoryReducer, categoryState);
+  return (
+    <Fragment>
+      <CategoryContext.Provider value={{ data, dispatch }}>
+        <AdminLayout children={<CategoryComponent />} />
+      </CategoryContext.Provider>
+    </Fragment>
+  );
 };
 
 export default Categories;
