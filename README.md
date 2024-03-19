@@ -1,30 +1,35 @@
 # Web-Design-Project
 Our project is a travel agency website where people can book different types of travel packages offered by the agency, checkout and make payment directly from the website. 
 
-Group members:
-NUID:002769438 - Yashwanth Pokala,
-NUID:002201614 - Vamsidhar Panithi,
-NUID:002240088 - Sai Abhishek,
-NUID:002980963 - Maurya Vinod,
-NUID:002747605 - Abhinav Ankur.
-
 **TECH STACK:**
-MongoDB - For database,
+**MongoDB - For database,
 Bootstrap - For Dynamic and responsive website,
 NodeJS, ExpressJS - For Backend Connection,
 CSS For Styling,
 ReactJS, HTML, JavaScript - Frontend,
-AWS - Deployement.
+AWS - Deployement.**
 
-**Traveler is a travel website, where users can book and explore different travel packages.**
+**Installation**
+1. git clone https://github.com/your-username/your-repo.git](https://github.com/yashwanth170/Traveler--React-JS-Node-JS-.git)https://github.com/yashwanth170/Traveler--React-JS-Node-JS-.git
+2. cd backend
+3. npm install
+4. node app.js
+5. cd ..
+6. cd frontend
+7. npm install
+8. npm start
 
-**The website has user authentication which is login and signup.**
+**Usage**
+There are two users Admin, Client.
 
-**The website includes webpages like:**
-Sign Up
-Login Page
-Home
-Packages
-About
-Contact Us
+**Admin:**
+Ability to create and update categories.
+Ability to create and update packages.
+Ability to manage customers.
+Access to view payments.
 
+**Customer:**
+Ability to view available packages.
+Ability to purchase packages.
+Ability to add packages to cart.
+Ability to proceed to checkout.
