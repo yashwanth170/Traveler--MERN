@@ -1,4 +1,4 @@
-# Web-Design-Project
+# TravelR- Full Stack Web Application
 Our project is a travel agency website where people can book different types of travel packages offered by the agency, checkout and make payment directly from the website. 
 
 **TECH STACK:**
